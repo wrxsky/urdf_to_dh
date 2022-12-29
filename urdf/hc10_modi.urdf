@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<robot name="hc_10">
+
+    <!-- joint list -->
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0.275" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint3" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0 0.700" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <joint name="joint4" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="0 0 -0.500" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint5" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0 0.162 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <joint name="joint6" type="revolute">
+    <parent link="link5"/>
+    <child link="link6"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint6-tool0" type="fixed">
+    <origin xyz="0 0 -0.130" rpy="3.1415926 0 0"/>
+    <parent link="link6"/>
+    <child link="tool0"/>
+  </joint>
+  <!-- end of joint list -->
+
+  <!-- link list -->
+  <link name="world"/>
+  <link name="base_link">
+  </link>
+  <link name="link1">
+  </link>
+  <link name="link2">
+  </link>
+  <link name="link3">
+  </link>
+  <link name="link4">
+  </link>
+  <link name="link5">
+  </link>
+  <link name="link6">
+  </link>
+  <link name="tool0"/>
+  <!-- end of link list -->
+
+</robot>
